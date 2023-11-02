@@ -8,13 +8,13 @@ namespace SpriteKind {
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.NPC2, function (sprite2, otherSprite2) {
     spørgsmål = true
-    game.showLongText("Virker det stadig?", DialogLayout.Bottom)
+    game.showLongText("Er der 86.200 sekunder på et døgn?", DialogLayout.Bottom)
     story.showPlayerChoices("Ja", "Nej")
-    if (story.checkLastAnswer("Nej")) {
+    if (story.checkLastAnswer("Ja")) {
         info.changeLifeBy(-1)
         Wizard2.sayText("Wrong. But proceed")
         Wizard2.setKind(SpriteKind.Færdig)
-    } else if (story.checkLastAnswer("Ja")) {
+    } else if (story.checkLastAnswer("Nej")) {
         info.changeScoreBy(100)
         Wizard2.sayText("Correct. Proceed")
         Wizard2.setKind(SpriteKind.Færdig)
@@ -26,7 +26,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.NPC2, function (sprite2, otherSp
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.NPC, function (sprite, otherSprite) {
     spørgsmål = true
-    game.showLongText("Virker det?", DialogLayout.Bottom)
+    game.showLongText("Er det muligt at stå på hænder med handsker på?", DialogLayout.Bottom)
     story.showPlayerChoices("Ja", "Nej")
     if (story.checkLastAnswer("Nej")) {
         info.changeLifeBy(-1)
@@ -44,13 +44,13 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.NPC, function (sprite, otherSpri
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.NPC5, function (sprite, otherSprite) {
     spørgsmål = true
-    game.showLongText("Spørgsmål5", DialogLayout.Bottom)
-    story.showPlayerChoices("svarmulighedKorrekt", "svarmulighedForkert")
-    if (story.checkLastAnswer("svarmulighedForkert")) {
+    game.showLongText("Kan kvinder spille fodbold?", DialogLayout.Bottom)
+    story.showPlayerChoices("Ja", "Nej")
+    if (story.checkLastAnswer("Nej")) {
         info.changeLifeBy(-1)
         Wizard5.sayText("Wrong. But proceed")
         Wizard5.setKind(SpriteKind.Færdig)
-    } else if (story.checkLastAnswer("svarmulighedKorrekt")) {
+    } else if (story.checkLastAnswer("Ja")) {
         info.changeScoreBy(100)
         Wizard5.sayText("Correct. Proceed")
         Wizard5.setKind(SpriteKind.Færdig)
@@ -65,13 +65,13 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairWest, function (spri
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.NPC3, function (sprite, otherSprite) {
     spørgsmål = true
-    game.showLongText("Spørgsmål3", DialogLayout.Bottom)
-    story.showPlayerChoices("svarmulighedKorrekt", "svarmulighedForkert")
-    if (story.checkLastAnswer("svarmulighedForkert")) {
+    game.showLongText("Er ølpølser den sande tapas?", DialogLayout.Bottom)
+    story.showPlayerChoices("Ja", "Nej")
+    if (story.checkLastAnswer("Nej")) {
         info.changeLifeBy(-1)
         Wizard3.sayText("Wrong. But proceed.")
         Wizard3.setKind(SpriteKind.Færdig)
-    } else if (story.checkLastAnswer("svarmulighedKorrekt")) {
+    } else if (story.checkLastAnswer("Ja")) {
         info.changeScoreBy(100)
         Wizard3.sayText("Correct. Proceed")
         Wizard3.setKind(SpriteKind.Færdig)
@@ -83,13 +83,13 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.NPC3, function (sprite, otherSpr
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.NPC4, function (sprite, otherSprite) {
     spørgsmål = true
-    game.showLongText("Spørgsmål4", DialogLayout.Bottom)
-    story.showPlayerChoices("svarmulighedKorrekt", "svarmulighedForkert")
-    if (story.checkLastAnswer("svarmulighedForkert")) {
+    game.showLongText("Kan bævere flyve?", DialogLayout.Bottom)
+    story.showPlayerChoices("Nej", "Ja")
+    if (story.checkLastAnswer("Ja")) {
         info.changeLifeBy(-1)
         Wizard4.sayText("Wrong. But proceed")
         Wizard4.setKind(SpriteKind.Færdig)
-    } else if (story.checkLastAnswer("svarmulighedKorrekt")) {
+    } else if (story.checkLastAnswer("Nej")) {
         info.changeScoreBy(100)
         Wizard4.sayText("Correct. Proceed")
         Wizard4.setKind(SpriteKind.Færdig)
